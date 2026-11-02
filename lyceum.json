@@ -1,0 +1,100 @@
+{
+  "lyceum": 1,
+  "title": "Penna, spada e lingua",
+  "description": "A co-taught AP Italian lesson on dialects and the making of a national language. Five rooms trace the Risorgimento and the Questione della lingua together, from the Tre Corone to the 1975 Dieci tesi, asking whether unification imposed a single language.",
+  "url": "https://mistertlibrary.github.io/risorgimentoelingua/",
+  "series": "",
+  "course": "AP Italian",
+  "subjects": [
+    "Culture and Geography",
+    "Social Studies"
+  ],
+  "sections": [
+    {
+      "title": "La domanda",
+      "anchor": "#domanda",
+      "keywords": [
+        "Risorgimento",
+        "Questione della lingua",
+        "dialects",
+        "dialetti",
+        "Italian unification"
+      ]
+    },
+    {
+      "title": "Cinque sale",
+      "anchor": "#tappe",
+      "keywords": [
+        "timeline"
+      ]
+    },
+    {
+      "title": "Sala 1: Prima dell’Italia",
+      "anchor": "tappa-1.html",
+      "keywords": [
+        "Dante",
+        "Petrarch",
+        "Boccaccio",
+        "Tre Corone",
+        "Florentine"
+      ]
+    },
+    {
+      "title": "Sala 2: Sussurri",
+      "anchor": "tappa-2.html",
+      "keywords": [
+        "censorship",
+        "Quadrari"
+      ]
+    },
+    {
+      "title": "Sala 3: La rivoluzione e il Regno",
+      "anchor": "tappa-3.html",
+      "keywords": [
+        "Verdi",
+        "1848",
+        "Garibaldi",
+        "Kingdom of Italy"
+      ]
+    },
+    {
+      "title": "Sala 4: Creare gli «italiani»",
+      "anchor": "tappa-4.html",
+      "keywords": [
+        "Manzoni",
+        "Ascoli",
+        "Papanti",
+        "Cuore",
+        "De Amicis",
+        "schools"
+      ]
+    },
+    {
+      "title": "Sala 5: Le conseguenze",
+      "anchor": "tappa-5.html",
+      "keywords": [
+        "Lombardo Radice",
+        "Procacci",
+        "radio",
+        "television"
+      ]
+    },
+    {
+      "title": "L’atlante",
+      "anchor": "atlante.html",
+      "keywords": [
+        "AIS",
+        "NavigAIS",
+        "linguistic atlas",
+        "bellringer"
+      ]
+    },
+    {
+      "title": "Opere citate",
+      "anchor": "#opere",
+      "keywords": [
+        "MLA"
+      ]
+    }
+  ]
+}
