@@ -91,7 +91,7 @@ figure img{max-width:100%;max-height:70vh;border:1px solid var(--rule);backgroun
 figcaption{font-size:.8rem;color:var(--soft);margin-top:.5rem}
 .labels{counter-reset:lab}
 .label{counter-increment:lab;background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1.3rem 1.5rem 1.1rem;margin:0 0 1.6rem;position:relative}
-.label::before{content:counter(lab);position:absolute;left:-2.6rem;top:1.1rem;font-family:var(--display);font-size:1.6rem;color:var(--red);width:2rem;text-align:right}
+.label::before{content:counter(lab);position:absolute;left:-2.6rem;top:1rem;font-family:var(--display);font-size:1.6rem;color:var(--red);width:2rem;text-align:right}
 @media (max-width:900px){.label::before{position:static;display:block;text-align:left;width:auto;margin-bottom:.3rem}}
 .label h3{text-align:left;font-size:1.1rem;margin:0 0 .3rem}
 .chips{margin:0 0 .8rem}
@@ -121,6 +121,42 @@ figcaption{font-size:.8rem;color:var(--soft);margin-top:.5rem}
 .tnotes{margin-top:3rem}
 .tnotes summary{cursor:pointer;font:700 .8rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);text-align:center}.tlock[hidden]{display:none}.tlock{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-top:.8rem;font-family:var(--sans)}.tlock input{font:inherit;padding:6px 8px;border:1px solid var(--ink);background:var(--sheet);color:var(--ink)}.tlock button{font:inherit;padding:6px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}.tmsg{flex-basis:100%;text-align:center;margin:0;font-size:.9rem}
 .tg{font-size:.92rem}.tg h3{text-align:left;font-size:1.1rem;margin:1.4rem 0 .4rem}.tg table{border-collapse:collapse;width:100%;font:.85rem var(--sans);margin:.4rem 0 1rem}.tg th,.tg td{border:1px solid var(--rule);padding:.35rem .5rem;text-align:left;vertical-align:top}
+.intro{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:2.4rem;align-items:center;max-width:46rem;margin:2.2rem auto 0;padding:0 1rem}
+.intro figure{margin:0}
+.intro figure img{max-height:22rem}
+.intro .epigraph{margin:0;text-align:left}
+@media (max-width:640px){.intro{grid-template-columns:1fr;gap:1.4rem}.intro .epigraph{text-align:center}}
+.rooms{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+@media (max-width:980px){.rooms{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}}
+.room{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--rule);border-top:3px solid var(--red);padding:1rem .9rem;text-decoration:none;color:var(--ink)}
+.room:hover{border-color:var(--red)}
+.room .n{font-family:var(--display);font-size:2rem;color:var(--red);line-height:1;text-align:center}
+.room .t{font-family:var(--display);font-size:1.1rem;color:var(--ox);text-align:center;margin:.35rem 0 .1rem;line-height:1.2}
+.room .d{font-size:.78rem;color:var(--soft);text-align:center;margin-bottom:.7rem}
+.room .lane{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--soft);margin:.4rem 0 .2rem;border-top:1px solid var(--rule);padding-top:.4rem}
+.room ul{list-style:none;margin:0;padding:0;font-size:.8rem}
+.room li{margin:0 0 .25rem;line-height:1.3}
+.room li b{color:var(--red);font-weight:600;margin-right:.25rem}
+.room .none{color:var(--soft)}
+.strip{display:flex;justify-content:center;gap:.5rem;margin-top:2.2rem;list-style:none;padding:0}
+.strip a{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;border:1px solid var(--rule);border-radius:50%;text-decoration:none;font-family:var(--display);color:var(--ox);background:var(--sheet)}
+.strip a[aria-current="page"]{background:var(--red);border-color:var(--red);color:var(--onred)}
+.strip a:hover{border-color:var(--red)}
+.thread{font-size:1.15rem;text-align:left;margin:2rem 0 .8rem;font-variant:small-caps;letter-spacing:.06em;color:var(--soft)}
+details.label{padding:0;margin-bottom:1rem}
+details.label>summary{list-style:none;cursor:pointer;padding:1.1rem 1.5rem 1rem 1.5rem;display:block}
+details.label>summary::-webkit-details-marker{display:none}
+details.label>summary h3,details.label>summary h4{display:inline;font-family:var(--display);font-weight:400;font-size:1.1rem;color:var(--ox)}
+details.label>summary .chips{margin:.4rem 0 0}
+details.label>summary::after{content:"+";float:right;font-family:var(--display);font-size:1.4rem;color:var(--red);line-height:1;margin-top:-1.6rem}
+details.label[open]>summary::after{content:"\2212"}
+details.label .body{padding:0 1.5rem 1.1rem}
+details.label .body figure{margin:1.2rem 0 .4rem}
+details.works-fold>summary{cursor:pointer;list-style:none;text-align:center}
+details.works-fold>summary h2{display:inline-block}
+details.works-fold>summary::-webkit-details-marker{display:none}
+details.works-fold>summary h2::before{content:"+ ";color:var(--red)}
+details.works-fold[open]>summary h2::before{content:"\2212  ";color:var(--red)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media print{.topbar,.pager,.a11y-toggle,.a11y-panel,.tnotes{display:none!important}body{background:#fff;color:#000}}
 </style>
@@ -183,6 +219,7 @@ function close(){box.hidden=true;big.removeAttribute("src");cl.innerHTML="";docu
 document.addEventListener("click",function(e){if(!box.hidden){if(box.contains(e.target)&&!(e.target.closest&&e.target.closest("a[href]")))close();return}var el=e.target.closest&&e.target.closest(".lyz");if(!el)return;var ctl=e.target.closest("button,input,textarea,select,summary"),lk=e.target.closest("a[href]");if(ctl&&ctl!==el&&el.contains(ctl))return;if(lk&&!IMG.test(lk.getAttribute("href"))&&lk!==el)return;e.preventDefault();e.stopPropagation();open(el)},true);
 document.addEventListener("keydown",function(e){if(!box.hidden){if(e.key==="Escape"){e.preventDefault();close()}else if(e.key==="Tab"){e.preventDefault();box.querySelector(".lyx-x").focus()}return}var el=e.target.classList&&e.target.classList.contains("lyz")?e.target:null;if(el&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(el)}});
 })();</script>
+<script>addEventListener("beforeprint",function(){document.querySelectorAll("details").forEach(function(d){if(!d.closest(".tnotes"))d.open=true})});</script>
 
 </body>
 </html>

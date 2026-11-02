@@ -91,7 +91,7 @@ figure img{max-width:100%;max-height:70vh;border:1px solid var(--rule);backgroun
 figcaption{font-size:.8rem;color:var(--soft);margin-top:.5rem}
 .labels{counter-reset:lab}
 .label{counter-increment:lab;background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1.3rem 1.5rem 1.1rem;margin:0 0 1.6rem;position:relative}
-.label::before{content:counter(lab);position:absolute;left:-2.6rem;top:1.1rem;font-family:var(--display);font-size:1.6rem;color:var(--red);width:2rem;text-align:right}
+.label::before{content:counter(lab);position:absolute;left:-2.6rem;top:1rem;font-family:var(--display);font-size:1.6rem;color:var(--red);width:2rem;text-align:right}
 @media (max-width:900px){.label::before{position:static;display:block;text-align:left;width:auto;margin-bottom:.3rem}}
 .label h3{text-align:left;font-size:1.1rem;margin:0 0 .3rem}
 .chips{margin:0 0 .8rem}
@@ -121,6 +121,42 @@ figcaption{font-size:.8rem;color:var(--soft);margin-top:.5rem}
 .tnotes{margin-top:3rem}
 .tnotes summary{cursor:pointer;font:700 .8rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);text-align:center}.tlock[hidden]{display:none}.tlock{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-top:.8rem;font-family:var(--sans)}.tlock input{font:inherit;padding:6px 8px;border:1px solid var(--ink);background:var(--sheet);color:var(--ink)}.tlock button{font:inherit;padding:6px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}.tmsg{flex-basis:100%;text-align:center;margin:0;font-size:.9rem}
 .tg{font-size:.92rem}.tg h3{text-align:left;font-size:1.1rem;margin:1.4rem 0 .4rem}.tg table{border-collapse:collapse;width:100%;font:.85rem var(--sans);margin:.4rem 0 1rem}.tg th,.tg td{border:1px solid var(--rule);padding:.35rem .5rem;text-align:left;vertical-align:top}
+.intro{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:2.4rem;align-items:center;max-width:46rem;margin:2.2rem auto 0;padding:0 1rem}
+.intro figure{margin:0}
+.intro figure img{max-height:22rem}
+.intro .epigraph{margin:0;text-align:left}
+@media (max-width:640px){.intro{grid-template-columns:1fr;gap:1.4rem}.intro .epigraph{text-align:center}}
+.rooms{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+@media (max-width:980px){.rooms{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}}
+.room{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--rule);border-top:3px solid var(--red);padding:1rem .9rem;text-decoration:none;color:var(--ink)}
+.room:hover{border-color:var(--red)}
+.room .n{font-family:var(--display);font-size:2rem;color:var(--red);line-height:1;text-align:center}
+.room .t{font-family:var(--display);font-size:1.1rem;color:var(--ox);text-align:center;margin:.35rem 0 .1rem;line-height:1.2}
+.room .d{font-size:.78rem;color:var(--soft);text-align:center;margin-bottom:.7rem}
+.room .lane{font-variant:small-caps;letter-spacing:.06em;font-size:.72rem;color:var(--soft);margin:.4rem 0 .2rem;border-top:1px solid var(--rule);padding-top:.4rem}
+.room ul{list-style:none;margin:0;padding:0;font-size:.8rem}
+.room li{margin:0 0 .25rem;line-height:1.3}
+.room li b{color:var(--red);font-weight:600;margin-right:.25rem}
+.room .none{color:var(--soft)}
+.strip{display:flex;justify-content:center;gap:.5rem;margin-top:2.2rem;list-style:none;padding:0}
+.strip a{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;border:1px solid var(--rule);border-radius:50%;text-decoration:none;font-family:var(--display);color:var(--ox);background:var(--sheet)}
+.strip a[aria-current="page"]{background:var(--red);border-color:var(--red);color:var(--onred)}
+.strip a:hover{border-color:var(--red)}
+.thread{font-size:1.15rem;text-align:left;margin:2rem 0 .8rem;font-variant:small-caps;letter-spacing:.06em;color:var(--soft)}
+details.label{padding:0;margin-bottom:1rem}
+details.label>summary{list-style:none;cursor:pointer;padding:1.1rem 1.5rem 1rem 1.5rem;display:block}
+details.label>summary::-webkit-details-marker{display:none}
+details.label>summary h3,details.label>summary h4{display:inline;font-family:var(--display);font-weight:400;font-size:1.1rem;color:var(--ox)}
+details.label>summary .chips{margin:.4rem 0 0}
+details.label>summary::after{content:"+";float:right;font-family:var(--display);font-size:1.4rem;color:var(--red);line-height:1;margin-top:-1.6rem}
+details.label[open]>summary::after{content:"\2212"}
+details.label .body{padding:0 1.5rem 1.1rem}
+details.label .body figure{margin:1.2rem 0 .4rem}
+details.works-fold>summary{cursor:pointer;list-style:none;text-align:center}
+details.works-fold>summary h2{display:inline-block}
+details.works-fold>summary::-webkit-details-marker{display:none}
+details.works-fold>summary h2::before{content:"+ ";color:var(--red)}
+details.works-fold[open]>summary h2::before{content:"\2212  ";color:var(--red)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media print{.topbar,.pager,.a11y-toggle,.a11y-panel,.tnotes{display:none!important}body{background:#fff;color:#000}}
 </style>
@@ -131,36 +167,16 @@ figcaption{font-size:.8rem;color:var(--soft);margin-top:.5rem}
 
 <main>
 <div class="wrap">
-<div class="crumb smallcaps"><a href="index.html#tappe">Cinque sale</a> · Sala 2 di 5</div>
+<nav aria-label="Sale"><ul class="strip"><li><a href="tappa-1.html" aria-label="Sala 1: Prima dell’Italia">1</a></li><li><a href="tappa-2.html" aria-current="page" aria-label="Sala 2: Sussurri">2</a></li><li><a href="tappa-3.html" aria-label="Sala 3: La rivoluzione e il Regno">3</a></li><li><a href="tappa-4.html" aria-label="Sala 4: Creare gli «italiani»">4</a></li><li><a href="tappa-5.html" aria-label="Sala 5: Le conseguenze">5</a></li></ul></nav>
+<div class="crumb smallcaps" style="margin-top:1rem"><a href="index.html#tappe">Cinque sale</a> · Sala 2 di 5</div>
 <h1 style="font-size:clamp(2.2rem,5vw,3.6rem);margin-top:.6rem">Sussurri</h1>
 <div class="dates">1796–1847</div>
 <div class="fleuron" aria-hidden="true">❧</div>
 <div class="prose" style="margin-top:1.6rem"><p>Per più di mezzo secolo, le potenze francese e austriaca avrebbero riacceso e spento i sogni di una nazione italiana. Finché eserciti di occupazione e sovrani locali di origine straniera (soprattutto di famiglie dinastiche come gli Asburgo) restavano sul suolo italiano, idee radicali come l’indipendenza e l’unificazione non avevano alcuna possibilità politica. Negli stati italiani le opinioni sulla forma ideale di governo erano diverse: alcuni sognavano un’insurrezione popolare che rovesciasse i sovrani esistenti e fondasse una repubblica; altri immaginavano una confederazione guidata dalla Santa Sede; altri ancora cercavano l’unificazione sotto un determinato monarca; e così via. Sotto un velo di repressione, artisti, scrittori, musicisti, attori e altri creativi diffondevano queste visioni attraverso le loro opere.</p></div>
 <aside class="scaffold" lang="en"><span class="tag smallcaps" lang="it">Contesto importante</span><blockquote><p>Since censorship and police surveillance made any form of open political debate impossible, literature, painting, and music were evocative vehicles for nationalist aspirations, but as soon as these were translated into specific political programs it became clear that nationalism was more likely to divide than unite Italians.</p><cite>John A. Davis, 2006</cite></blockquote></aside>
-
-<h2>Le fonti</h2><div class="labels"><article class="label"><h3>Ogni popolo ha le sue melodie, 1836</h3><div class="chips"><span class="chip">Arti</span></div><div class="text"><p>Ogni popolo ha certe melodie caratteristiche che sono tutte sue, com’è sua la lingua che parla.</p></div><div class="src">(Quadrari, citato in Tedesco 263n9)</div></article></div>
+<h2>Le fonti</h2><div class="labels"><details class="label"><summary><h3>Ogni popolo ha le sue melodie, 1836</h3><div class="chips"><span class="chip">Arti</span></div></summary><div class="body"><div class="text"><p>Ogni popolo ha certe melodie caratteristiche che sono tutte sue, com’è sua la lingua che parla.</p></div><div class="src">(Quadrari, citato in Tedesco 263n9)</div></div></details></div>
 <nav class="pager" aria-label="Tappe"><a href="tappa-1.html">← Sala 1. Prima dell’Italia</a><a href="tappa-3.html">Sala 3. La rivoluzione e il Regno →</a></nav>
 </div>
-<section class="wide"><div class="timeline">
-<div class="corner"></div>
-<div class="head"><a href="tappa-1.html"><b>Sala 1</b><span>fino al 1796</span></a></div>
-<div class="head now"><a href="tappa-2.html"><b>Sala 2</b><span>1796–1847</span></a></div>
-<div class="head"><a href="tappa-3.html"><b>Sala 3</b><span>1848–1870</span></a></div>
-<div class="head"><a href="tappa-4.html"><b>Sala 4</b><span>1861–1886</span></a></div>
-<div class="head"><a href="tappa-5.html"><b>Sala 5</b><span>1886–oggi</span></a></div>
-<div class="lane">Risorgimento</div>
-<div><ul></ul></div>
-<div class="now"><ul><li><b>1796</b>invasione francese</li><li><b>1815</b>Congresso di Vienna</li><li><b>1831</b>Giovine Italia</li></ul></div>
-<div><ul><li><b>1848</b>rivoluzioni</li><li><b>1860</b>i Mille</li><li><b>1861</b>Regno d’Italia</li><li><b>1866</b>Veneto</li><li><b>1870</b>Roma</li></ul></div>
-<div><ul><li><b>1861</b>vota meno del 2%</li></ul></div>
-<div><ul></ul></div>
-<div class="lane">Questione della lingua</div>
-<div><ul><li><b>1252</b>fiorino d’oro</li><li><b>1525</b>Prose di Bembo</li></ul></div>
-<div class="now"><ul><li><b>1836</b>Quadrari</li></ul></div>
-<div><ul><li><b>1859</b>legge Casati</li></ul></div>
-<div><ul><li><b>1864</b>Inchiesta</li><li><b>1867</b>programmi</li><li><b>1868</b>relazione di Manzoni</li><li><b>1873</b>Proemio di Ascoli</li><li><b>1875</b>Papanti</li><li><b>1886</b>Cuore</li></ul></div>
-<div><ul><li><b>1923</b>dal dialetto alla lingua</li><li><b>1975</b>Dieci tesi</li></ul></div>
-</div></section>
 </main>
 <footer class="site-foot">
 <p class="big">Penna, spada e lingua è un progetto della biblioteca della West Essex High School.</p>
@@ -210,6 +226,7 @@ function close(){box.hidden=true;big.removeAttribute("src");cl.innerHTML="";docu
 document.addEventListener("click",function(e){if(!box.hidden){if(box.contains(e.target)&&!(e.target.closest&&e.target.closest("a[href]")))close();return}var el=e.target.closest&&e.target.closest(".lyz");if(!el)return;var ctl=e.target.closest("button,input,textarea,select,summary"),lk=e.target.closest("a[href]");if(ctl&&ctl!==el&&el.contains(ctl))return;if(lk&&!IMG.test(lk.getAttribute("href"))&&lk!==el)return;e.preventDefault();e.stopPropagation();open(el)},true);
 document.addEventListener("keydown",function(e){if(!box.hidden){if(e.key==="Escape"){e.preventDefault();close()}else if(e.key==="Tab"){e.preventDefault();box.querySelector(".lyx-x").focus()}return}var el=e.target.classList&&e.target.classList.contains("lyz")?e.target:null;if(el&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(el)}});
 })();</script>
+<script>addEventListener("beforeprint",function(){document.querySelectorAll("details").forEach(function(d){if(!d.closest(".tnotes"))d.open=true})});</script>
 
 </body>
 </html>
